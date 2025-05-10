@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAbFBMVEX///8AAAD6+vp9fX3ExMT39/fo6Oj09PTk5OTx8fHr6+vW1tbOzs7g4OBcXFykpKRXV1dubm4+Pj6Tk5OLi4uvr69hYWErKytzc3MKCgoyMjKEhIQcHBw5OTm8vLydnZ1PT09ISEgTExMkJCTgrkhKAAAEoklEQVR4nO2b6XbqOgyFScg8zwwJCYH3f8drmXBaIGEytxFr7e9Xm2KWFMvyluwuFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8xfXduEz6Gp2lZMLcRnyLWNC2e24hPUQlnyrmNeAd7ZHWsNG1r/L0pyjh13V4/s8XEJP4c1iiSjqz1UDiz/sZ0tiXDvctnpXhWz2OOGq0wfHOVuQLxrJvHHEUoc22vAi1vcnMeaxTRhTNaas1txoegoGqGqdFNiT6vRQrohZgZR/zghm2d0Twdki7wruLMMvyviDy7q0Ohx4JU+8Ux9+2fj5jB6osEjm1cuEI0xb990+rkwvqKqRE6IG8GD/ZVFfWDO/2gz4JK/vol2dqrpbWrojT8MAyDNq428klOqcDYyYUUew+/hwWBXPfdr4rMGcKOhICMsST4lhRnCcuT8HJJuOWKnCiEujmIKfqSaSGcuLwVlj5505QL3cj9b5mWadwDZYFvrAXGcOSyYT8rumtZYRD4juXes5WKAe41p+fH1XlvTGP/zuLen/MzV6z2ardft5PuBLxXjXkrXLTN2ph4+zapgZsmARfcfHtyYJfWRVGnu+G3iWpMpxZax1SUeWupU5q69S3Xtl3Hb+uTLFvbowP8kR4BE/T9SXKFv7ZI1y/kw2R0RChc7Z0/Mu81EimGr2WWbkhtVo2NsIT72/AvbHuVXNo88p6dZNBhN3gVU2d8ua+MLgA3ohJgZHu0IqbOUOZKJgxzKAdHt2nLERGYiTGuZ7PaO2OhG1eTe0Yr0tzxtvVPrdrIWoT9btmJyo1LktZpXayn/56O5meD1pK7GCrpjEtz0BC7ZXMn+kkiZ9erxlxq8qgmO4sFJsunmMq+Z2jmlm1ZtsaPxV5z6hAGyZGTM3b6SGVRD/24appVFi3jwWhSM7J3GwZGXER9xyMLhPTi70a8+0t6Nn1BLnhUa56bf7ptOSyWTFiuRcAc735GP14o6W15iryIR2Sd0bvdYTMtv/7RUhMwivrD4E9BiuH68GZmup8q7MEn9UF/WvnqZwyLyBpwhqy6OTTH5y8q6PHgzp5TmRnIWmzTV3UXvxT8vuzQHjl1M07iPuneeL8O1XGcnPFlMVa8FyoOKek9myrTJTGivb3R+SKtNWwOMkgJqxyrUGqumEwNVYlaqnDVwhTjt0waTfIcWSm1UpjmnzJHCZPOw/LxDtKT0OtYKn3Dp3DFFrNRS60uG23mUWZVtGTLRQNQM2apmIt2XG5rUrGlWrNnrJxRXL0rLmEmGytqzvBJANRuWavdvZKpmcUFR8pmmVqM8Nk07eRRP+YRdLFuugf6p8hTr/E++ZMUjIQm9Yk1BQlAB00bHlEmchGJs+PbycilKjVhMjHD7ZfkzYQmC4gDn38JkKtm8kjm/lBfXnvgdFfbknVz1r48OWEsOyG8bjI6pxsM6zjwTP1JzNDoIjlMKRX+D5zmRtP6dPk00XDvoWB3ddsttffIWhYl5iX6eXJeoonZTcsJ3er6lzw5pC0LdTmF7vnGcwQhw/ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAM/AcGXDD0SIwVZQAAAABJRU5ErkJggg==" type="image/x-icon">
+    <title>WeatherApp</title>
+</head>
+
+<body>
+
+   <div class="card">
+<!-- INPUT FIELDS -->
+        <div class="search-field">
+                <input type="text" spellcheck="false" placeholder="Enter city name" id="searchBox">
+                <button id="searchBtn">
+                    <img src="/images/search.png" alt="search-icon">
+                </button>
+        </div>
+
+        <div class="errorContainer">
+            <p>Invalid city name 😞</p>
+        </div>
+        
+<!-- WEATHER DETAILS -->
+        <div class="weather" id="weatherDetails">
+                <img src="/images/rain.png" alt="rain-icon" class="weather-icon" id="weatherIcon">
+                <h1 class="temp" id="Temp">22°C</h1>
+                <h2 class="city" id="City">Chennai</h2>
+<!-- DETAILS -->
+                    <div class="details">
+                        <div class="col">
+                            <img src="/images/humidity.png" alt="humidity-icon">
+                            <div>
+                                <p class="humidity" id="Humidity">50%</p>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <img src="/images/wind.png" alt="wind-icon">
+                            <div>
+                                <p class="wind" id="Wind">15 Km/h</p>
+                                <p>Wind Speed</p>
+                            </div>
+                        </div>
+
+                    </div>
+        </div>
+   </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
